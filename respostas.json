@@ -1,11 +1,35 @@
 {
   "matricula": "",
   "casos": {
-    "1": {"modo_falha": "", "linha_evidencia": 0, "tecnica": ""},
-    "2": {"modo_falha": "", "linha_evidencia": 0, "tecnica": ""},
-    "3": {"modo_falha": "", "linha_evidencia": 0, "tecnica": ""},
-    "4": {"modo_falha": "", "linha_evidencia": 0, "tecnica": ""},
-    "5": {"modo_falha": "", "linha_evidencia": 0, "tecnica": ""},
-    "6": {"modo_falha": "", "linha_evidencia": 0, "tecnica": ""}
+    "1": {
+      "modo_falha": "poisoning",
+      "linha_evidencia": 8,
+      "tecnica": "isolate (o agente anotou como fato uma suposição falsa e essa nota passou a guiar as decisões seguintes; notas não verificadas deveriam ficar separadas até serem confirmadas)"
+    },
+    "2": {
+      "modo_falha": "distraction",
+      "linha_evidencia": 14,
+      "tecnica": "compress (o agente repete o round() que já falhou antes e ignora sugestão do usuário;resumir o histórico tirando as tentativas repetidas resolve o problema da janela cheia)"
+    },
+    "3": {
+      "modo_falha": "confusion",
+      "linha_evidencia": 0,
+      "tecnica": "select (são 38 ferramentas e 6 delas são quase iguais, carregar só as ferramentas relevantes para o pedido evita a escolha errada)"
+    },
+    "4": {
+      "modo_falha": "clash",
+      "linha_evidencia": 5,
+      "tecnica": "select (o AGENTS.md manda nunca editar arquivos em /migration, mas a wiki manda; a busca deveria filtrar documentos desatualizados ou dar prioridade às regras do projeto)"
+    },
+    "5": {
+      "modo_falha": "clash",
+      "linha_evidencia": 8,
+      "tecnica": "compress (a contradição está nas instruções do usuário, então o melhor é tirar do contexto a instrução que foi substituída)"
+    },
+    "6": {
+      "modo_falha": "confusion",
+      "linha_evidencia": 6,
+      "tecnica": "isolate (a API devolveu pedidos de todos os clientes e o agente analisou outro pedido; essa saída deveria ser filtrada e só os pedidos do cliente 204 deveria ser retornados)"
+    }
   }
 }
